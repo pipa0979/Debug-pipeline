@@ -638,10 +638,10 @@ if (HAPFILE == "" && GENFILE == ""	 && SAMPLEFILE == "" && PEDFILE== "" && MAPFI
 	exit(0);
 }
 
-if (HAPFILE!="" && MAPFILE!="")
+if (HAPFILE!="" && MAPFILE!="" && SAMPLEFILE!="")
 {
 	OUTFILE =  HAPFILE.substr(0,HAPFILE.find_last_of("."));
-	Compute compute(HAPFILE, SAMPLEFILE, GENFILE );
+	Compute compute(HAPFILE, SAMPLEFILE );
 	PEDFILE = HAPFILE.substr(0,HAPFILE.find_last_of("."))+".ped";
 
 }
